@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var contact = new Schema({
     firstName: {type: String, required: true}
     ,lastName: {type: String, required: true}
-    //,birthDate: {type: Date, required: true}
+    ,birthDate: {type: Date, required: false}
     },
     {timestamps: true}
 );

@@ -29,7 +29,7 @@ router.post('/', (req, res, next) => {
     var formData = {
         firstName: req.body.firstName
         ,lastName: req.body.lastName
-        //,birthDate: req.body.birthDate
+        ,birthDate: req.body.birthDate
     };
 
     // create a new contact
