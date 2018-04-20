@@ -1,0 +1,18 @@
+// www
+//
+// Start script for the application.
+// Starts the server and sets the global environment.
+
+var app = require('../app');
+var http = require('http');
+
+// Set the port that the application will listen on.
+var port = 8081;
+app.set('port', port);
+
+// Create the server and start listening.
+var server = http.createServer(app);
+server.listen(port);
+server.on('listening', () => {
+    console.log("Listening on %s", server.address().port);
+});
