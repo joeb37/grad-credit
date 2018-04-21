@@ -5,3 +5,7 @@ body {
 .contact-list {
     margin-top: 15px;
 }
+.emphasis {
+    color: #9a1776;
+    font-weight:bold;
+}

@@ -12,7 +12,13 @@ class ContactService {
     // list
     static list() {
         // this method returns a promise
-        return Contact.find({}).sort({lastName: 'asc', firstName: 'asc'})
+        return Contact.aggregate([
+                {$addFields: {
+                    month: { $month: "$birthDate"},
+                    day: { $dayOfMonth: "$birthDate"}
+                }},
+                {$sort: {month: 1, day: 1}}
+            ])
             .then((contacts) => {
                 return contacts;
             }).catch((err) => {

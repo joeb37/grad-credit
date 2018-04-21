@@ -11,6 +11,9 @@ var contacts = require('./routes/contacts');
 
 var app = express();
 
+// set up 'moment' for date formatting
+app.locals.moment = require("moment");
+
 // setup the mongoose connection
 var uri = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0-shard-00-00-tkkm3.mongodb.net:27017,cluster0-shard-00-01-tkkm3.mongodb.net:27017,cluster0-shard-00-02-tkkm3.mongodb.net:27017/${process.env.DB_NAME}?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin`;
 mongoose.connect(uri);

@@ -1,5 +1,13 @@
 div(class="contact-list container")
     each contact in contacts
         div(class="contact-item row")
-            div(class="col-sm") #{contact.lastName},&nbsp;#{contact.firstName}
-            div(class="col-sm") #{contact.birthDate}
+            - 
+                var birthDate = moment(contact.birthDate).utc();
+                var oneMonthFromNow = moment() + moment.duration(1, "month")
+                var nextBirthDay = moment().month(birthDate.month()).date(birthDate.date())
+                var classes = ['col']
+                if (nextBirthDay > moment.now() && nextBirthDay < oneMonthFromNow) {
+                     classes.push('emphasis') 
+                }
+            div(class=classes) #{contact.firstName}&nbsp;#{contact.lastName}
+            div(class=classes)= nextBirthDay.format('MMM DD')
