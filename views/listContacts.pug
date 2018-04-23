@@ -5,7 +5,9 @@ div(class="contact-list container")
                 var birthDate = moment(contact.birthDate).utc();
                 var oneMonthFromNow = moment() + moment.duration(1, "month")
                 var nextBirthDay = moment().month(birthDate.month()).date(birthDate.date())
-                var classes = ['col']
+                if (moment() > nextBirthday)
+                    nextBirthday.year(moment().year() + 1);
+                var classes = ['col-sm'];
                 if (nextBirthDay > moment.now() && nextBirthDay < oneMonthFromNow) {
                      classes.push('emphasis') 
                 }
