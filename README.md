@@ -9,6 +9,6 @@ The project demonstrates adding dates to a basic contact list application. This 
 - Enhance the contact list to highlight upcoming birthdays
 
 
-There is an accompanying video here:
+There is an accompanying video here: <https://youtu.be/ET9nQ-ceaDY>
 
 The code branch with the changes described above can be found here: <https://github.com/joeb37/grad-credit/tree/solution>
