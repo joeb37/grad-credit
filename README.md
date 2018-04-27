@@ -13,7 +13,7 @@ The project demonstrates adding dates to a basic contact list application. This 
   * Installed node package moment.js
   * Required moment in app.js
   * Formatted the birth date in contact list
-  * Retrieved the contacts from the database so that they are sorted by the contact's birth month and day
+* Retrieved the contacts from the database so that they are sorted by the contact's birth month and day
   * Changed database retrieval in contactController.js
 * Enhanced the contact list to highlight upcoming birthdays
   * Added a new style to contacts.css
